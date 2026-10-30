@@ -1,4 +1,4 @@
-# Junhak Lee — Public Vulnerability Index
+# Junhak Lee(Juntheworld) : Public Vulnerability Index
 
 Public vulnerability disclosures reported by **Junhak Lee** (`juntheworld` / `junfuture1103`).
 
