@@ -2,9 +2,9 @@
 
 Public vulnerability disclosures reported by **Junhak Lee** (`juntheworld` / `junfuture1103`).
 
-**24 unique public advisories:** 4 CVEs and 20 GitHub Security Advisories.
+**29 issued or published vulnerability identifiers:** 4 CVEs, 24 GitHub Security Advisories, and 1 KVE.
 
-Last verified: **2026-10-21**
+Last verified: **2026-11-09**
 
 > CVE rows include their GitHub Advisory Database aliases when available. Those aliases refer to the same vulnerabilities and are not counted again.
 
@@ -16,6 +16,12 @@ Last verified: **2026-10-21**
 | CVE-2026-82479 | NASA cFS / SBN | Buffer overflow caused by validating an SBN TCP message size after the receive operation. | [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-82479) · [GitHub alias: GHSA-6cv3-j4mc-jf2r](https://github.com/advisories/GHSA-6cv3-j4mc-jf2r) |
 | CVE-2026-82480 | NASA cFS / cFE | Integer underflow in the Software Bus user-data length calculation. | [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-82480) · [GitHub alias: GHSA-h35r-6hg6-mcg3](https://github.com/advisories/GHSA-h35r-6hg6-mcg3) |
 | CVE-2026-105164 | NASA cFS / cFE | Out-of-bounds read in File Services input filename parsing. | [CVE record](https://www.cve.org/CVERecord?id=CVE-2026-105164) · [GitHub alias: GHSA-v57f-4hqc-phxq](https://github.com/advisories/GHSA-v57f-4hqc-phxq) · [VulDB](https://vuldb.com/vuln/413396) |
+
+## Korea Vulnerability Enumeration
+
+| ID | Target | Brief description | Authority |
+|---|---|---|---|
+| KVE-2026-1610 | AhnLab Safe Transaction (ASTx) | The privileged WatchDog backup service follows a user-controlled symlink, allowing a local authenticated user to expose the contents of root-only files through a readable backup. | [KISA KNVD](https://knvd.krcert.or.kr/) |
 
 ## GitHub Security Advisories
 
@@ -53,6 +59,12 @@ Last verified: **2026-10-21**
 | GHSA-fh7m-mf49-m786 | An unbounded destination entity-ID length causes an out-of-bounds write in the CFDP Proxy Put Request parser. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-fh7m-mf49-m786) |
 | GHSA-fj72-4276-r26x | Malformed CFDP PDUs delivered over Bundle Protocol can trigger a heap buffer overflow. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-fj72-4276-r26x) |
 | GHSA-gc93-87v8-hpfx | Repeated BPv7 extension-block instances can overflow fixed stack state used by the parser. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-gc93-87v8-hpfx) |
+| GHSA-7fg8-jc5p-6cr9 | An unbounded TCPCL contact-header endpoint-ID length can force an excessive allocation and terminate the bundle transport process. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-7fg8-jc5p-6cr9) |
+| GHSA-9c2j-w239-vwmr | A one-byte UDP datagram can forge the internal AMS/MAMS receiver shutdown signal and stop the receiver thread. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-9c2j-w239-vwmr) |
+| GHSA-6679-cgf8-qw8p | Missing length validation for an AMS `cell_status` supplement can cause a NULL dereference or heap out-of-bounds read. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-6679-cgf8-qw8p) |
+| GHSA-c47v-hjwv-6fc9 | A crafted DGR UDP datagram can trigger an out-of-bounds read through unsafe `svcDataLength` conversion and terminate the process. | [Advisory](https://github.com/nasa-jpl/ION-DTN/security/advisories/GHSA-c47v-hjwv-6fc9) |
+
+The four ION-DTN advisories above were published on 2026-11-07. CVEs have been requested, but GitHub currently shows `No known CVE` for each one.
 
 ### Yamcs
 
@@ -66,4 +78,4 @@ Last verified: **2026-10-21**
 
 ## Scope
 
-This index contains only advisories that were publicly accessible when last verified. Accepted reports that remain private drafts are intentionally excluded.
+This index lists issued CVE and KVE identifiers plus GitHub Security Advisories that were publicly accessible when last verified. Accepted reports that remain private drafts are intentionally excluded. KISA does not currently expose a searchable per-record public page for KVE-2026-1610, so the official KNVD portal is linked as the issuing authority.
